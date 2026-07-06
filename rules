@@ -1,0 +1,343 @@
+‏כדאי לנסות את יכולות ה-AI ישירות באפליקציות המועדפות … ‏אתה יכול להיעזר ב-Gemini כדי טיוטות ולשפר את התוכן, וגם לקבל גישה ל-Gemini Pro ולדור הבא של ה-AI מבית Google
+1
+100%
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>סטנדרט ברייקרים | Lucky Zard</title>
+  <style>
+    :root {
+      --bg: #0f0f14;
+      --card: #181821;
+      --card2: #20202b;
+      --text: #f5f5f7;
+      --muted: #b9bac7;
+      --accent: #ff7a18;
+      --accent2: #ffd36a;
+      --danger: #ff4f4f;
+      --ok: #4ade80;
+      --line: rgba(255,255,255,0.12);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, "Noto Sans Hebrew", sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(255,122,24,0.18), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(255,211,106,0.12), transparent 32%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.75;
+    }
+
+    .wrap {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 32px 18px 56px;
+    }
+
+    .hero {
+      border: 1px solid var(--line);
+      background: linear-gradient(145deg, rgba(255,122,24,0.16), rgba(255,255,255,0.04));
+      border-radius: 26px;
+      padding: 34px 24px;
+      box-shadow: 0 18px 50px rgba(0,0,0,0.32);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 14px;
+      border-radius: 999px;
+      background: rgba(255,122,24,0.18);
+      border: 1px solid rgba(255,122,24,0.45);
+      color: var(--accent2);
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 5vw, 4rem);
+      line-height: 1.05;
+      letter-spacing: -1px;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      max-width: 760px;
+      margin: 18px 0 0;
+      font-size: 1.08rem;
+    }
+
+    .notice {
+      margin-top: 22px;
+      padding: 16px 18px;
+      background: rgba(255,211,106,0.11);
+      border: 1px solid rgba(255,211,106,0.35);
+      border-radius: 18px;
+      color: #fff3c4;
+      font-weight: 600;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .mini {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 16px;
+      color: var(--muted);
+    }
+
+    .mini strong {
+      display: block;
+      color: var(--text);
+      font-size: 1.05rem;
+      margin-bottom: 4px;
+    }
+
+    section {
+      margin-top: 18px;
+      background: rgba(24,24,33,0.9);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      padding: 22px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+    }
+
+    section h2 {
+      margin: 0 0 12px;
+      font-size: 1.35rem;
+      color: var(--accent2);
+    }
+
+    ul {
+      margin: 10px 0 0;
+      padding-right: 20px;
+    }
+
+    li { margin: 7px 0; }
+
+    .rule-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 30px;
+      height: 30px;
+      margin-left: 8px;
+      border-radius: 10px;
+      background: rgba(255,122,24,0.18);
+      border: 1px solid rgba(255,122,24,0.35);
+      color: var(--accent2);
+      font-weight: 800;
+    }
+
+    .approval {
+      background: linear-gradient(145deg, rgba(74,222,128,0.12), rgba(255,255,255,0.04));
+      border-color: rgba(74,222,128,0.28);
+    }
+
+    .approval h2 { color: #86efac; }
+
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .cta {
+      margin-top: 24px;
+      border-radius: 22px;
+      padding: 24px;
+      background: linear-gradient(145deg, rgba(255,122,24,0.22), rgba(255,211,106,0.12));
+      border: 1px solid rgba(255,122,24,0.35);
+      text-align: center;
+    }
+
+    .cta h2 {
+      margin: 0 0 10px;
+      color: var(--text);
+    }
+
+    .cta p {
+      margin: 0;
+      color: #fff0d0;
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    @media (max-width: 720px) {
+      .grid { grid-template-columns: 1fr; }
+      .wrap { padding: 20px 12px 42px; }
+      section, .hero { padding: 20px 16px; border-radius: 20px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <div class="hero">
+      <div class="badge">Lucky Zard Breakers Standard</div>
+      <h1>סטנדרט ברייקרים<br>Lucky Zard</h1>
+      <p class="subtitle">
+        המטרה שלנו היא לבנות יחד קהילת ברייקים חזקה, איכותית, מסודרת ומכבדת — מקום שכולם יכולים ליהנות בו, לגדול בו ולהרוויח ממנו יחד.
+      </p>
+      <div class="notice">
+        מי שמאשר ומתחייב לסטנדרט — מגיב 👍 בקבוצת הברייקרים.
+      </div>
+
+      <div class="grid">
+        <div class="mini"><strong>איכות</strong>צילום ברור, תאורה טובה, שמע תקין ושולחן מסודר.</div>
+        <div class="mini"><strong>אווירה</strong>בלי קללות, בלי ירידות, בלי רעילות — רק הייפ, כיף ופירגון.</div>
+        <div class="mini"><strong>תיאום</strong>כל ברייק עולה לאישור מראש ומבוצע רק אחרי 👍.</div>
+        <div class="mini"><strong>קהילה</strong>כולם מפרגנים, משתפים ודוחפים את Lucky Zard קדימה.</div>
+      </div>
+    </div>
+
+    <section>
+      <h2><span class="rule-number">1</span>לוז והרשמה מראש</h2>
+      <ul>
+        <li>כל ברייקר שרוצה להעלות ברייק / מירוץ / לייב צריך לתאם מראש.</li>
+        <li>יהיו 2 סלוטים מסודרים ללייבים/ברייקים כדי למנוע התנגשויות.</li>
+        <li>אין להעלות ברייק בלי אישור מראש בקבוצת הברייקרים.</li>
+      </ul>
+    </section>
+
+    <section class="approval">
+      <h2><span class="rule-number">2</span>אישור ברייק</h2>
+      <ul>
+        <li>כל ברייק / מירוץ צריך לעלות קודם לקבוצת הברייקרים לאישור.</li>
+        <li>ברייק שקיבל 👍 מההנהלה / מהאחראים — מאושר לביצוע.</li>
+        <li>ברייק שלא קיבל אישור — לא עולה לקבוצות ולא יוצא לדרך.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="rule-number">3</span>פרסום הברייקים</h2>
+      <ul>
+        <li>כל ברייק או מירוץ שאושר צריך לעלות לקבוצת הלייב בוואטסאפ.</li>
+        <li>בנוסף, יש לפרסם את הברייק בקבוצת הפייסבוק של Lucky Zard.</li>
+        <li>הלייב עצמו יתבצע בפלטפורמת הפייסבוק של Lucky Zard.</li>
+        <li>אם יש פלטפורמה אחרת — היא תיבחן פרטנית מול ההנהלה.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="rule-number">4</span>מיתוג בלייבים</h2>
+      <ul>
+        <li>בלייבים עובדים תחת Lucky Zard או בשם פרטי.</li>
+        <li>אין לפרסם מותג אישי, קבוצה מתחרה, עמוד נפרד או פעילות חיצונית בתוך הלייבים של הקהילה.</li>
+        <li>המטרה היא לבנות בית אחד חזק — לא שכל אחד ימשוך למקום אחר.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="rule-number">5</span>איכות צילום ולייב</h2>
+      <ul>
+        <li>מצלמה ברורה, תאורה טובה, שולחן מסודר ושמע תקין.</li>
+        <li>צילום ברור של הקלפים והמוצרים לאורך כל הברייק.</li>
+        <li>התנהלות רגועה, נעימה ומקצועית.</li>
+        <li>ברייק שלא עומד באיכות בסיסית יכול להיעצר או לא לקבל אישור לברייקים הבאים עד לשיפור.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="rule-number">6</span>שפה ואווירה</h2>
+      <ul>
+        <li>שומרים על שפה נקייה ומכבדת.</li>
+        <li>בלי קללות, בלי ירידות, בלי זלזול ובלי אווירה רעילה.</li>
+        <li>המטרה היא לייצר כיף, התלהבות, הייפ ופירגון — שאנשים ירצו להישאר ולחזור שוב.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="rule-number">7</span>פרגון הדדי בין ברייקרים</h2>
+      <ul>
+        <li>כל ברייקר מחויב לפרגן לברייקרים האחרים.</li>
+        <li>להיכנס ללייבים, להגיב, להרים, לשתף ולעזור לדחוף פעילות.</li>
+        <li>הציפייה היא שכל ברייקר ייכנס לפחות פעם אחת בשבוע לברייק של כל ברייקר פעיל בקבוצה, אלא אם כבר נכנס אליו באותו שבוע.</li>
+        <li>אנחנו לא מתחרים אחד בשני — אנחנו בונים יחד קהילה.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="rule-number">8</span>קידום הקהילה</h2>
+      <ul>
+        <li>כל מי שלוקח חלק בקבוצה מחויב לעזור לפרסם ולדחוף את Lucky Zard.</li>
+        <li>המטרה: לפנות לפחות ל־50 אנשים ביום מתוך קבוצות פייסבוק גדולות ורלוונטיות, קהילות פוקימון, אספנים וחברים שמתעניינים בתחום.</li>
+        <li>כדי לאכוף את זה בצורה נעימה: כל ברייקר יעדכן פעם ביום בקבוצת הברייקרים שהוא ביצע קידום.</li>
+        <li>אפשר לשלוח צילום מסך / הודעה קצרה / עדכון מספרי.</li>
+        <li>לא מחפשים לרדוף אחרי אנשים — אבל כן חשוב לראות שכולם עושים מאמץ אמיתי.</li>
+        <li>מי שלא משתתף לאורך זמן בקידום, בפרגון או בפעילות — ייבחן מחדש אם הוא מתאים להיות חלק מצוות הברייקרים הפעיל.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="rule-number">9</span>כבוד והתנהלות</h2>
+      <ul>
+        <li>כולם מתנהגים בכבוד אחד לשני.</li>
+        <li>אין עקיצות, אין לכלוכים, אין מלחמות אגו ואין פתיחת חזיתות מול ברייקרים אחרים.</li>
+        <li>אם יש בעיה — פונים בפרטי להנהלה ומסדרים את זה בצורה בוגרת.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="rule-number">10</span>ברייקרים ותיקים וניהול</h2>
+      <ul>
+        <li>ברייקרים עם ותק, פעילות טובה, אחריות ויחס מכבד יקבלו בעתיד הרשאות ניהול.</li>
+        <li>הם יעזרו להנהלה לשמור על סדר בקבוצה.</li>
+        <li>ניהול הוא לא כוח — הוא אחריות.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="rule-number">11</span>שקיפות ותוכניות לעתיד</h2>
+      <ul>
+        <li>כל פעם שיהיה רעיון חדש, מהלך חדש או כיוון חדש לקהילה — נשתף את הברייקרים קודם.</li>
+        <li>חשוב לנו שתדעו לאן אנחנו מתכננים לקחת את הספינה.</li>
+        <li>מי שבפנים צריך להרגיש שהוא חלק ממשהו גדול יותר.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="rule-number">12</span>סחורה משותפת בעתיד</h2>
+      <ul>
+        <li>בהמשך נבחן אפשרות להתארגן יחד על סחורה משותפת, מחירים טובים יותר, מלאי משותף ושיתופי פעולה.</li>
+        <li>מי שבעניין — מעולה 👍</li>
+        <li>מי שרוצה לעשות מדי פעם ברייק או שניים בשביל הכיף, בלי מחויבות קבועה — זה בסדר, אבל שיעדכן בפרטי כדי שנעזור לו בצורה שמתאימה לפעילות נקודתית.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2><span class="rule-number">13</span>מחויבות לקבוצה</h2>
+      <ul>
+        <li>מי שנמצא פה כברייקר פעיל צריך להבין שזה לא רק “להעלות ברייק וללכת”.</li>
+        <li>זה להיות חלק מצוות.</li>
+        <li>זה לפרגן, לקדם, לעזור, לשמור על אווירה ולבנות משהו ביחד.</li>
+        <li>מי שמתאים לו — ברוך הבא למשפחה 🔥</li>
+        <li>מי שפחות מתאים לו המחויבות הזאת — הכול טוב, נדבר בפרטי ונמצא דרך שמתאימה לו.</li>
+      </ul>
+    </section>
+
+    <div class="cta">
+      <h2>בהצלחה לכולם 🐉🔥</h2>
+      <p>יאללה נבנה את Lucky Zard כמו שצריך.</p>
+    </div>
+
+    <div class="footer">
+      Lucky Zard © סטנדרט ברייקרים | גרסה 1.0
+    </div>
+  </main>
+</body>
+</html>
